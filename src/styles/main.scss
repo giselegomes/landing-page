@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+$yellow: #FFCB69;
+$white: #FFFFFF;
+$gray: #797d62;
+$red: #d08c60;
+
+
+html {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    background-color: $yellow;
+    height: calc(max(400px, 40vw));
+    position: relative;
+
+    .banner-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .banner-content__text-title {
+            font-family: 'Lobster', cursive;
+            font-size: calc(max(32px, 5vw));
+        }
+        .banner-content__text-description {
+            color: $gray;
+        }
+
+        .banner-content__text-btn {
+            background-color: $red;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+    }
+
+    .banner-border {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: -5px;
+        .banner-border_wave {
+            fill: $white;
+        }
+    }
+}
+
+
+
