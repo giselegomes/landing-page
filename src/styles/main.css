@@ -19,7 +19,7 @@ button {
 
 .banner {
   background-color: #FFCB69;
-  height: calc(max(400px, 40vw));
+  height: calc(max(320px, 40vw));
   position: relative;
 }
 
@@ -35,21 +35,44 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 60px 40px;
+}
+
+@media (min-width: 1024px) {
+  .banner .banner-content {
+    padding: 0;
+  }
+}
+
+.banner .banner-content .banner-content__image {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .banner .banner-content .banner-content__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .banner .banner-content .banner-content__text-title {
   font-family: 'Lobster', cursive;
-  font-size: calc(max(32px, 5vw));
+  font-size: calc(max(42px, 5vw));
+  padding-bottom: 22px;
 }
 
 .banner .banner-content .banner-content__text-description {
   color: #797d62;
+  padding: 0 0 22px 12px;
+  font-size: 1.2em;
 }
 
 .banner .banner-content .banner-content__text-btn {
   background-color: #d08c60;
   padding: 10px;
   border-radius: 10px;
+  margin-left: 12px;
 }
 
 .banner .banner-border {

@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+//Colors
 $yellow: #FFCB69;
 $white: #FFFFFF;
 $gray: #797d62;
 $red: #d08c60;
 
+
+//Medias
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+@mixin tablet {
+    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
 
 html {
     box-sizing: border-box;
@@ -24,7 +41,7 @@ button {
 
 .banner {
     background-color: $yellow;
-    height: calc(max(400px, 40vw));
+    height: calc(max(320px, 40vw));
     position: relative;
 
     .banner-content {
@@ -32,19 +49,35 @@ button {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        padding: 60px 40px;
+            @include desktop() {
+                padding: 0;
+            }
+
+        .banner-content__image {
+            display: none;
+            @include desktop() {
+                display: flex;
+            }
+        }
 
         .banner-content__text-title {
             font-family: 'Lobster', cursive;
-            font-size: calc(max(32px, 5vw));
+            font-size: calc(max(42px, 5vw));
+            padding-bottom: 22px;
         }
+
         .banner-content__text-description {
             color: $gray;
+            padding: 0 0 22px 12px;
+            font-size: 1.2em;
         }
 
         .banner-content__text-btn {
             background-color: $red;
             padding: 10px;
             border-radius: 10px;
+            margin-left: 12px;
 
         }
     }
@@ -54,11 +87,9 @@ button {
         bottom: 0;
         width: 100%;
         margin-bottom: -5px;
+
         .banner-border_wave {
             fill: $white;
         }
     }
 }
-
-
-
