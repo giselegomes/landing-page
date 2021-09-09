@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+//Pallete
+$yellow: #ffcb69;
+$white: #ffffff;
+$gray: #797d62;
+$whiskey: #d08c60;
+$pale-leaf: #cddbc3;
+
+//Variables Colors
+$primary-color: $yellow;
+$card-color: $pale-leaf;
+$description-color: $gray;
+
+//Medias
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+@mixin tablet {
+    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}

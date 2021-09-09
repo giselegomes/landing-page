@@ -18,7 +18,7 @@ button {
 }
 
 .banner {
-  background-color: #FFCB69;
+  background-color: #ffcb69;
   height: calc(max(320px, 40vw));
   position: relative;
 }
@@ -57,7 +57,7 @@ button {
 }
 
 .banner .banner-content .banner-content__text-title {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   font-size: calc(max(42px, 5vw));
   padding-bottom: 22px;
 }
@@ -73,6 +73,11 @@ button {
   padding: 10px;
   border-radius: 10px;
   margin-left: 12px;
+  cursor: pointer;
+}
+
+.banner .banner-content .banner-content__text-btn:hover {
+  color: #cddbc3;
 }
 
 .banner .banner-border {
@@ -83,6 +88,54 @@ button {
 }
 
 .banner .banner-border .banner-border_wave {
-  fill: #FFFFFF;
+  fill: #ffffff;
+}
+
+.options {
+  width: 90%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.options .options-title {
+  font-size: calc(max(28px, 3vw));
+}
+
+.options .options-description {
+  margin-bottom: 32px;
+}
+
+.options .options-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .options .options-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.options .options-card .options-card_item {
+  background-color: #cddbc3;
+  padding: 0 40px;
+  border-radius: 8px;
+}
+
+.options .options-card .options-card_item.box {
+  padding: 20px 40px;
+  min-width: 20vw;
 }
 /*# sourceMappingURL=main.css.map */
